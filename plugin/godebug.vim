@@ -55,7 +55,7 @@ function! godebug#toggleBreakpoint(file, line, ...) abort
 endfunction
 
 function! godebug#writeBreakpointsFile(...) abort
-  call writefile(g:godebug_breakpoints + ["continue"], g:godebug_breakpoints_file)
+  call writefile(g:godebug_breakpoints, g:godebug_breakpoints_file)
 endfunction
 
 function! godebug#deleteBreakpointsFile(...) abort
