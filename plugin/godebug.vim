@@ -26,8 +26,8 @@ endif
 " make sure cache base path exists
 call mkdir(g:godebug_cache_path, "p")
 
-" create a reasonably unique breakpoints file path per vim instance
-let g:godebug_breakpoints_file = g:godebug_cache_path . "/". getpid() . localtime()
+" create a breakpoint file
+let g:godebug_breakpoints_file = g:godebug_cache_path . "/breakpoints"
 
 autocmd VimLeave * call godebug#deleteBreakpointsFile()<cr>
 
